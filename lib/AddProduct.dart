@@ -169,6 +169,7 @@ class _AddProductState extends State<AddProduct> {
                       );
                       */
 
+                    //NEED TO INTEGRATE FIREBASE FOR STORING DATA
 
                     },
                     child: Text('SAVE!'),
