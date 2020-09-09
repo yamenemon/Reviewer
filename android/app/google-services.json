@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "427597707369",
+    "firebase_url": "https://reviewer-7cdae.firebaseio.com",
+    "project_id": "reviewer-7cdae",
+    "storage_bucket": "reviewer-7cdae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:427597707369:android:d56eb885c624a99b86caf8",
+        "android_client_info": {
+          "package_name": "com.tritechfirm.reviewer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "427597707369-torjtiarmbh8bp0245uu7autcqmvlv3n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMp64EFqjrAk4jiSxaDBBGDJ9p1XX80xI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "427597707369-torjtiarmbh8bp0245uu7autcqmvlv3n.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "427597707369-l3tadafceqe0n1eo3oj53hg7st6fgdm4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tritechfirm.reviewer"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

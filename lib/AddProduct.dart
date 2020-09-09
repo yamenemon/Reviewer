@@ -3,6 +3,27 @@ import 'package:image_picker/image_picker.dart';
 import 'dart:async';
 import 'dart:io';
 import 'package:flutter/cupertino.dart';
+// import 'package:firebase_core/firebase_core.dart';
+// import 'package:firebase_database/firebase_database.dart';
+// import 'package:firebase_database/ui/firebase_animated_list.dart';
+
+// final firebaseApp = FirebaseApp(
+//   options: Platform.isIOS
+//       ? FirebaseOptions(
+//     appId: '1:427597707369:ios:13c8f27b9d1d30c986caf8',
+//     apiKey: 'AIzaSyDIIuv0jkxAUaGUIzllPpfB4k6YQXrpvPU',
+//     // projectId: 'flutter-firebase-plugins',
+//     // messagingSenderId: '297855924061',
+//     databaseURL: 'https://reviewer-7cdae.firebaseio.com',
+//   )
+//       : FirebaseOptions(
+//     appId: '1:297855924061:android:669871c998cc21bd',
+//     apiKey: 'AIzaSyD_shO5mfO9lhy2TVWhfo1VUmARKlG4suk',
+//     messagingSenderId: '297855924061',
+//     projectId: 'flutter-firebase-plugins',
+//     databaseURL: 'https://flutterfire-cd2f7.firebaseio.com',
+//   ),
+// );
 
 class AddProduct extends StatefulWidget {
   @override
@@ -170,6 +191,7 @@ class _AddProductState extends State<AddProduct> {
                       */
 
                     //NEED TO INTEGRATE FIREBASE FOR STORING DATA
+                    
 
                     },
                     child: Text('SAVE!'),
