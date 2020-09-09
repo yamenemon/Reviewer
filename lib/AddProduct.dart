@@ -39,7 +39,6 @@ class _AddProductState extends State<AddProduct> {
   final productNameController = TextEditingController();
   final productDescripController = TextEditingController();
 
-
   Future getImageUsingPicker(int buttonTag) async {
     var imageType = ImageSource.camera;
     if (buttonTag == 1) {
@@ -190,8 +189,8 @@ class _AddProductState extends State<AddProduct> {
                       );
                       */
 
-                    //NEED TO INTEGRATE FIREBASE FOR STORING DATA
-                    
+                      //NEED TO INTEGRATE FIREBASE FOR STORING DATA
+                      
 
                     },
                     child: Text('SAVE!'),
