@@ -3,6 +3,7 @@ import 'package:image_picker/image_picker.dart';
 import 'dart:async';
 import 'dart:io';
 import 'package:flutter/cupertino.dart';
+import 'package:reviewer/ReviewerAppBar.dart';
 // import 'package:firebase_core/firebase_core.dart';
 // import 'package:firebase_database/firebase_database.dart';
 // import 'package:firebase_database/ui/firebase_animated_list.dart';
@@ -96,17 +97,8 @@ class _AddProductState extends State<AddProduct> {
         }
       },
       child: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          elevation: 40,
-          title: Text("Add Product"),
-          flexibleSpace: Container(
-            decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topRight,
-                    end: Alignment.bottomLeft,
-                    colors: <Color>[Colors.red, Colors.blue])),
-          ),
+        appBar: ReviewerAppBar(
+          titleText: "Add Product",
         ),
         body: SingleChildScrollView(
           child: Center(
@@ -190,8 +182,6 @@ class _AddProductState extends State<AddProduct> {
                       */
 
                       //NEED TO INTEGRATE FIREBASE FOR STORING DATA
-                      
-
                     },
                     child: Text('SAVE!'),
                   ),

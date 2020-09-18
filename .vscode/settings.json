@@ -1,4 +1,10 @@
 {
-    "dart.flutterRunLogFile": null,
-    "editor.rulers": []
+    "[dart]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false,
+        "editor.suggest.insertMode": "replace",
+        "editor.rulers": [],
+        "editor.mouseWheelZoom": true
+    },
 }
