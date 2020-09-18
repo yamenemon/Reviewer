@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:reviewer/ProductDetails.dart';
+import 'package:reviewer/ProductDetails/ProductDetails.dart';
 import 'package:reviewer/Services/fetchProducts.dart';
 import 'Models/Product.dart';
 import 'Product/Body.dart';

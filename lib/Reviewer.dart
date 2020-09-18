@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:reviewer/ProductDetails.dart';
+import 'package:reviewer/ProductDetails/ProductDetails.dart';
 import 'AddProduct.dart';
 import 'ProductCell.dart';
 import 'ReviewerAppBar.dart';
@@ -49,7 +49,10 @@ class _ReviewerState extends State<Reviewer> {
               ),
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  gradient: LinearGradient(colors: [Colors.red, Colors.blue])),
+                  gradient: LinearGradient(colors: <Color>[
+                    Colors.deepPurpleAccent[100],
+                    Colors.indigo[100]
+                  ])),
             ),
             onPressed: () {
               addProduct();

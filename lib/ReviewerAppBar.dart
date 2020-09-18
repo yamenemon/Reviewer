@@ -21,7 +21,10 @@ class ReviewerAppBar extends StatelessWidget implements PreferredSize {
             gradient: LinearGradient(
                 begin: Alignment.topRight,
                 end: Alignment.bottomLeft,
-                colors: <Color>[Colors.red, Colors.blue])),
+                colors: <Color>[
+              Colors.deepPurpleAccent[100],
+              Colors.indigo[300]
+            ])),
       ),
     );
   }
