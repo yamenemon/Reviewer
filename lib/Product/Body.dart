@@ -67,7 +67,7 @@ class Body extends StatelessWidget {
                     child: FadeInImage.assetNetwork(
                       placeholder: 'images/shoe.jpg',
                       image: product.image,
-                      fit: BoxFit.fitHeight,
+                      fit: BoxFit.cover,
                     ),
                   ),
                 ),
