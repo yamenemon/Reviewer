@@ -5,9 +5,8 @@ import 'package:reviewer/ReviewerAppBar.dart';
 import '../size_config.dart';
 
 class ProductDetails extends StatefulWidget {
-  // final product;
-  ProductDetails({Key key, @required this.product}) : super(key: key);
-  final Product product;
+  final Product furnitureProduct;
+  ProductDetails({Key key, @required this.furnitureProduct}) : super(key: key);
   @override
   _ProductDetailsState createState() => _ProductDetailsState();
 }
@@ -17,22 +16,28 @@ class _ProductDetailsState extends State<ProductDetails> {
 
   @override
   Widget build(BuildContext context) {
+    print("${widget.furnitureProduct.image} detail page");
     return Scaffold(
       appBar: ReviewerAppBar(
-        titleText: "Product Details",
+        titleText: "${widget.furnitureProduct.subTitle}",
       ),
       body: Container(
-        child: AspectRatio(
-                  aspectRatio: 1.6,
-                  child: Hero(
-                    tag: product.id,
-                    child: FadeInImage.assetNetwork(
-                      placeholder: 'images/shoe.jpg',
-                      image: product.image,
-                      fit: BoxFit.fitHeight,
-                    ),
-                  ),
+        child: Column(
+          children: [
+            AspectRatio(
+              aspectRatio: 1.6,
+              child: Hero(
+                tag: widget.furnitureProduct.id,
+                child: FadeInImage.assetNetwork(
+                  placeholder: 'images/shoe.jpg',
+                  image: widget.furnitureProduct.image,
+                  fit: BoxFit.fitHeight,
                 ),
+              ),
+            ),
+            Text("${widget.furnitureProduct.description}")
+          ],
+        ),
       ),
     );
   }

@@ -8,14 +8,14 @@ class Body extends StatelessWidget {
     @required this.cellHeight,
     @required this.scale,
     @required this.cellWidth,
-    @required this.product,
-    @required this.onTap,
+    @required this.onTap, 
+    @required this.furnitureProduct,
   }) : super(key: key);
 
   final double cellHeight;
   final double scale;
   final double cellWidth;
-  final Product product;
+  final Product furnitureProduct;
   final Function onTap;
 
   @override
@@ -43,38 +43,22 @@ class Body extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                /*
-                Container(
-                  height: cellHeight * 0.50 * scale,
-                  width: cellWidth,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: NetworkImage(
-                            "${product.image}"), //AssetImage('images/shoe.jpg'),
-                        fit: BoxFit.fill,
-                      ),
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(15.0 * scale),
-                        topRight: Radius.circular(15.0 * scale),
-                      )),
-                ),
-                */
                 AspectRatio(
                   aspectRatio: 1.6,
                   child: Hero(
-                    tag: product.id,
+                    tag: furnitureProduct.id,
                     child: FadeInImage.assetNetwork(
                       placeholder: 'images/shoe.jpg',
-                      image: product.image,
+                      image: furnitureProduct.image,
                       fit: BoxFit.fitHeight,
                     ),
+                    transitionOnUserGestures: true,
                   ),
                 ),
                 Padding(
                   padding: EdgeInsets.only(top: 5 * scale, left: 10 * scale),
                   child: Text(
-                    "${product.title}",
+                    "${furnitureProduct.title}",
                     maxLines: 1,
                     style: TextStyle(
                         fontSize: 20 * scale,
@@ -86,7 +70,7 @@ class Body extends StatelessWidget {
                   padding: EdgeInsets.only(
                       top: 5 * scale, left: 10 * scale, right: 10 * scale),
                   child: Text(
-                    "${product.description}",
+                    "${furnitureProduct.description}",
                     maxLines: 3,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
@@ -101,7 +85,7 @@ class Body extends StatelessWidget {
                     RatingBar(
                       ignoreGestures: true,
                       itemSize: 20 * scale,
-                      initialRating: double.tryParse(this.product.id),
+                      initialRating: double.tryParse(this.furnitureProduct.id),
                       minRating: 1,
                       maxRating: 5,
                       direction: Axis.horizontal,
@@ -121,7 +105,7 @@ class Body extends StatelessWidget {
                       width: 20 * scale,
                     ),
                     Text(
-                      "(${product.price}) Reviews",
+                      "(${furnitureProduct.price}) Reviews",
                       style: TextStyle(
                           fontSize: 15 * scale,
                           fontWeight: FontWeight.bold,

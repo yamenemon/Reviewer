@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:reviewer/ProductDetails/ProductDetails.dart';
+import 'package:reviewer/Models/Product.dart';
+import 'package:reviewer/Services/fetchProducts.dart';
 import 'AddProduct.dart';
 import 'ProductCell.dart';
 import 'ReviewerAppBar.dart';
@@ -35,8 +36,18 @@ class _ReviewerState extends State<Reviewer> {
           body: Container(
             margin: EdgeInsets.only(left: 15, right: 15, top: 0, bottom: 0),
             color: Colors.transparent,
-            child: ProductCell(
-              product: null,
+            child: LayoutBuilder(
+              builder: (BuildContext context, BoxConstraints constraints) {
+                return FutureBuilder(
+                  future: fetchProducts(),
+                  builder: (context, snapshot) {
+                    List<Product> data = snapshot.data;
+                    return snapshot.hasData
+                        ? ProductCell(furnitureProducts: data)
+                        : Center(child: Image.asset('images/ripple.gif'));
+                  },
+                );
+              },
             ),
           ),
           floatingActionButton: FloatingActionButton(
